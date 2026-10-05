@@ -1,0 +1,35 @@
+================================================================================
+                      ALL ALGORITHM TYPES IN THIS VERSION
+================================================================================
+
+1. SEQUENTIAL (LINEAR)
+   Executes instructions strictly in order, line-by-line from top to bottom,
+   without skipping or repeating steps.
+   * Where used: System initialization (e.g., setting S_total = 0, resetting
+     sensor state flags).
+
+2. CONDITIONAL (SELECTION / BRANCHING)
+   Uses logical decisions (IF / ELSE / MULTI-WAY SWITCH) to select and 
+   execute specific execution paths based on evaluated conditions.
+   * Where used: Multi-way decision logic to evaluate shot types (1, 2, or 3 
+     points based on shooterPosition).
+
+3. ITERATIVE (LOOPING)
+   Repeats a block of code continuously until a specific condition or 
+   exit criteria is met.
+   * Where used: Main timing loop checking system ticks (Is t % 1 == 0?) 
+     to continuously monitor game state.
+
+4. RECURSIVE
+   A function that solves a problem by calling smaller instances of 
+   itself until reaching a base termination case.
+   * Where used: Hierarchical data structures, file system searching, 
+     and divide-and-conquer algorithms (QuickSort, MergeSort).
+
+5. EVENT-DRIVEN / STATE-BASED (NEW IN FULL VERSION)
+   Monitors system state using boolean or enum flags and executes specific 
+   routines asynchronously in response to external hardware triggers.
+   * Where used: Asynchronously registering player shot release (isShotInFlight) 
+     and linking it to the net sensor beam break event.
+
+================================================================================
