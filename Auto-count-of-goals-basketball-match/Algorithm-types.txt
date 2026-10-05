@@ -20,13 +20,7 @@
    * Where used: Main timing loop checking system ticks (Is t % 1 == 0?) 
      to continuously monitor game state.
 
-4. RECURSIVE
-   A function that solves a problem by calling smaller instances of 
-   itself until reaching a base termination case.
-   * Where used: Hierarchical data structures, file system searching, 
-     and divide-and-conquer algorithms (QuickSort, MergeSort).
-
-5. EVENT-DRIVEN / STATE-BASED (NEW IN FULL VERSION)
+4. EVENT-DRIVEN / STATE-BASED (NEW IN FULL VERSION)
    Monitors system state using boolean or enum flags and executes specific 
    routines asynchronously in response to external hardware triggers.
    * Where used: Asynchronously registering player shot release (isShotInFlight) 
