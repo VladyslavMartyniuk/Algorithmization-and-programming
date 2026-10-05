@@ -1,0 +1,72 @@
+================================================================================
+                   AUTOMATIC BASKETBALL GOAL COUNTER
+================================================================================
+
+SYSTEM OVERVIEW:
+This algorithm controls an optical sensor system placed inside a basketball net
+to automatically track points scored during a match.
+
+
+SYSTEM PARAMETERS & VARIABLES:
+* S_total     : Integer (Holds total score, initial value = 0)
+* sensorState : Enum (Optical beam status: CLEAR or BROKEN)
+* t           : Integer (System clock tick in seconds)
+
+
+=========================== MAIN ALGORITHM FLOW ===========================
+
+                     [ START ]
+                         |
+                         v
+               /   Is t % 1 == 0?   \
+              /                      \
+             +------------------------+
+               |                    |
+            ( YES )               ( NO )
+               |                    |
+               v                    v
+  / Is sensorState == BROKEN? \   [ Wait 1 sec / t + 1 ]
+ /                             \    |
++-------------------------------+   |
+  |                           |     |
+( YES )                     ( NO )  |
+  |                           |     |
+  v                           v     v
+[ S_total = S_total + 2 ]   [ Keep current score ]
+[ Update Display ]            |     |
+  |                           |     |
+  +------------->-------------+     |
+                 |                  |
+                 v                  v
+         +-------<------------------+
+         |
+         v
+  ( Loop to START )
+
+===========================================================================
+
+
+STEP-BY-STEP LOGIC EXECUTION:
+
+1. INITIALIZATION
+   - Set S_total = 0
+   - Set sensorState = CLEAR
+   - Set system timer t = 0
+
+2. MAIN TIMING LOOP
+   - Evaluate condition: Is t % 1 == 0?
+     * NO  : Wait 1 second, set t = t + 1, return to Step 2.
+     * YES : Proceed to Step 3 (Check Routine).
+
+3. CHECK ROUTINE (checkGoal)
+   - Read hardware state from optical sensor.
+   - Evaluate condition: Is sensorState == BROKEN?
+     * YES : 1. Increment total score: S_total = S_total + 2
+             2. Send update command to the digital scoreboard display.
+             3. Reset sensor state back to CLEAR.
+     * NO  : Maintain current S_total value without changes.
+
+4. LOOP CONTINUATION
+   - Return to Step 2 to await the next timing cycle.
+
+================================================================================
