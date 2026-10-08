@@ -1,25 +1,25 @@
- ================================================================================
-                    ADDITIONAL ALGORITHM CLASSIFICATIONS
+================================================================================
+                           TYPES OF ALGORITHMS USED
 ================================================================================
 
-* NUMBER-THEORETIC ALGORITHM
-  Operates specifically on integer properties, divisibility rules, and prime 
-  factorization concepts within computational number theory.
+* TRIAL DIVISION ALGORITHM (OPTIMIZED BRUTE-FORCE)
+  Systematically checks integers up to floor(sqrt(n)) to locate all factor 
+  pairs without searching up to n-1.
 
-* IN-PLACE / CONSTANT SPACE ALGORITHM (O(1) SPACE)
-  Executes using a fixed amount of auxiliary memory regardless of input size, 
-  storing only a few scalar variables (n, sum, i).
+* ITERATIVE ALGORITHM
+  Relies on a sequential loop structure running from i = 2 to floor(sqrt(n)) 
+  rather than recursive call stacks.
 
-* PSEUDO-POLYNOMIAL TIME ALGORITHM
-  Runs in O(sqrt(n)) relative to the numeric value n, but exponential 
-  O(2^(b/2)) relative to the bit-length b = log2(n) of the input.
+* DETERMINISTIC ALGORITHM
+  Operates with fixed, reproducible logic that produces identical results 
+  for any input n without probabilistic or randomized elements.
 
-* SEQUENTIAL / SINGLE-THREADED ALGORITHM
-  Executes instructions strictly one after another in a single execution thread 
-  without parallel processing.
+* DECISION ALGORITHM
+  Solves a binary decision problem, returning a discrete boolean result 
+  (Perfect vs. Not Perfect).
 
-* EXACT ALGORITHM
-  Guarantees the precise mathematical answer every time, as opposed to an 
-  approximation or probabilistic heuristic algorithm.
+* IMPERATIVE / PROCEDURAL ALGORITHM
+  Changes internal state explicitly through sequentially executed statements, 
+  conditional branching, and variable accumulation (sum).
 
 ================================================================================
