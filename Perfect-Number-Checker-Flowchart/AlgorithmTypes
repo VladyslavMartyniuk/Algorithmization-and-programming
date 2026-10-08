@@ -1,0 +1,25 @@
+ ================================================================================
+                    ADDITIONAL ALGORITHM CLASSIFICATIONS
+================================================================================
+
+* NUMBER-THEORETIC ALGORITHM
+  Operates specifically on integer properties, divisibility rules, and prime 
+  factorization concepts within computational number theory.
+
+* IN-PLACE / CONSTANT SPACE ALGORITHM (O(1) SPACE)
+  Executes using a fixed amount of auxiliary memory regardless of input size, 
+  storing only a few scalar variables (n, sum, i).
+
+* PSEUDO-POLYNOMIAL TIME ALGORITHM
+  Runs in O(sqrt(n)) relative to the numeric value n, but exponential 
+  O(2^(b/2)) relative to the bit-length b = log2(n) of the input.
+
+* SEQUENTIAL / SINGLE-THREADED ALGORITHM
+  Executes instructions strictly one after another in a single execution thread 
+  without parallel processing.
+
+* EXACT ALGORITHM
+  Guarantees the precise mathematical answer every time, as opposed to an 
+  approximation or probabilistic heuristic algorithm.
+
+================================================================================
